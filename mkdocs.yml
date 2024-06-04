@@ -1,0 +1,25 @@
+site_name: CALCulator Documentation
+theme:
+  name: material
+
+plugins:
+  - mkdocstrings:
+      default_handler: python
+      handlers:
+        python:
+          options:
+            show_source: true
+            docstring_style: numpy
+      features:
+        - search.suggest
+        - search.highlight
+  - search:
+      enabled: true
+
+nav:
+  - Home: index.md
+  - User Guide:
+    - Functionality: operations.md
+    - Usage: usage.md
+  - Authors: authors.md
+
